@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "133308496507",
+    "firebase_url": "https://mpchat-7470e.firebaseio.com",
+    "project_id": "mpchat-7470e",
+    "storage_bucket": "mpchat-7470e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:133308496507:android:4304f0127e9fc1433dc0de",
+        "android_client_info": {
+          "package_name": "com.elbehi.mpc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "133308496507-3g0ll5s4d2bp71drobrp25k0a8d4ptfh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlJWPWoUzW26J6oJhBNgP-bm3NPXSKq9k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "133308496507-3g0ll5s4d2bp71drobrp25k0a8d4ptfh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:133308496507:android:645cfdf45d5e38a03dc0de",
+        "android_client_info": {
+          "package_name": "com.elbehi.mpc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "133308496507-3g0ll5s4d2bp71drobrp25k0a8d4ptfh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlJWPWoUzW26J6oJhBNgP-bm3NPXSKq9k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "133308496507-3g0ll5s4d2bp71drobrp25k0a8d4ptfh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
