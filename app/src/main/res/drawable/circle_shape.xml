@@ -5,13 +5,13 @@
     android:shape="oval">
 
     <gradient
-        android:startColor="@color/light_green"
-        android:endColor="@color/green"
+        android:startColor="#FBC02D"
+        android:endColor="#FBC02D"
         android:angle="270"/>
 
     <stroke
         android:width="1px"
-        android:color="@color/black"/>
+        android:color="@color/white"/>
 
 </shape>
 

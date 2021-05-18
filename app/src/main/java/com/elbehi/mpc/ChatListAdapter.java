@@ -4,6 +4,7 @@ package com.elbehi.mpc;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
+import android.support.v4.content.ContextCompat;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -124,18 +125,16 @@ public class ChatListAdapter extends BaseAdapter {
 
         if (isItMe) {
 
-
             holder.params.gravity = Gravity.END;
-            holder.authorName.setTextColor(Color.GREEN);
-
-            // If you want to use colours from colors.xml
-            // int colourAsARGB = ContextCompat.getColor(mActivity.getApplicationContext(), R.color.yellow);
-            // holder.authorName.setTextColor(colourAsARGB);
-
+            int colourAsARGB = ContextCompat.getColor(mActivity.getApplicationContext(), R.color.yellow);
+            holder.authorName.setTextColor(colourAsARGB);
             holder.body.setBackgroundResource(R.drawable.bubble2);
+
         } else {
+
             holder.params.gravity = Gravity.START;
-            holder.authorName.setTextColor(Color.BLUE);
+            int colourAsARGB = ContextCompat.getColor(mActivity.getApplicationContext(), R.color.blue);
+            holder.authorName.setTextColor(colourAsARGB);
             holder.body.setBackgroundResource(R.drawable.bubble1);
         }
 

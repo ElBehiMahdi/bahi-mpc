@@ -12,7 +12,9 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -23,16 +25,19 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class RegisterActivity extends AppCompatActivity {
 
+
+
+
     // Constants
     static final String CHAT_PREFS = "ChatPrefs";
     static final String DISPLAY_NAME_KEY = "username";
 
-    // TODO: Add member variables here:
     // UI references.
     private AutoCompleteTextView mEmailView;
     private AutoCompleteTextView mUsernameView;
     private EditText mPasswordView;
     private EditText mConfirmPasswordView;
+    private Button home;
 
     // Firebase instance variables
     private FirebaseAuth mAuth;
@@ -43,6 +48,7 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
+        home = (Button)findViewById(R.id.home);
         mEmailView = (AutoCompleteTextView) findViewById(R.id.register_email);
         mPasswordView = (EditText) findViewById(R.id.register_password);
         mConfirmPasswordView = (EditText) findViewById(R.id.register_confirm_password);
@@ -60,8 +66,16 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
-        // TODO: Get hold of an instance of FirebaseAuth
+        //instance of FirebaseAuth
         mAuth = FirebaseAuth.getInstance();
+
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RegisterActivity.this,LoginActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
     }
@@ -111,7 +125,6 @@ public class RegisterActivity extends AppCompatActivity {
             // form field with an error.
             focusView.requestFocus();
         } else {
-            // TODO: Call create FirebaseUser() here
             createFirebaseUser();
 
         }
@@ -123,12 +136,12 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private boolean isPasswordValid(String password) {
-        //TODO: Add own logic to check for a valid password
+        //check for a valid password
         String confirmPassword = mConfirmPasswordView.getText().toString();
         return confirmPassword.equals(password) && password.length() > 6;
     }
 
-    // TODO: Create a Firebase user
+    //Create a Firebase user
     private void createFirebaseUser() {
 
         String email = mEmailView.getText().toString();
@@ -157,7 +170,7 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
 
-    // TODO: Save the display name to Shared Preferences
+    //Save the display name to Shared Preferences
     private void saveDisplayName() {
         String displayName = mUsernameView.getText().toString();
         SharedPreferences prefs = getSharedPreferences(CHAT_PREFS, 0);
@@ -165,7 +178,7 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
 
-    // TODO: Create an alert dialog to show in case registration failed
+    //Create an alert dialog to show in case registration failed
     private void showErrorDialog(String message){
 
         new AlertDialog.Builder(this)
